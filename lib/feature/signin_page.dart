@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:isirumah/core/app_asset.dart';
 import 'package:isirumah/core/app_color.dart';
 import 'package:isirumah/widget/button.dart';
 
@@ -23,27 +24,57 @@ class _SigninPageState extends State<SigninPage> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFFF6F6F6),
       body: Form(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SingleChildScrollView(
             child: SafeArea(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 106,
+                    height: 72,
                   ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      "Nama App.",
-                      style: GoogleFonts.poppins(
-                          fontSize: 34,
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primary),
+                  Image.asset(
+                    AppAsset.logo,
+                  ),
+                  const SizedBox(
+                    height: 42,
+                  ),
+                  Text(
+                    "Masuk",
+                    style: GoogleFonts.plusJakartaSans(
+                        fontSize: 34,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.plusJakartaSans(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black, // Warna default untuk teks
+                      ),
+                      children: [
+                        const TextSpan(
+                          text: "Masuk ke akun teman ",
+                        ),
+                        TextSpan(
+                          text: "#isiRumah",
+                          style: GoogleFonts.plusJakartaSans(
+                            color: AppColor.primary,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
@@ -61,7 +92,7 @@ class _SigninPageState extends State<SigninPage> {
                     alignment: Alignment.centerRight,
                     child: Text(
                       "Lupa Password?",
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.plusJakartaSans(
                           //decoration: TextDecoration.underline,
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
@@ -79,42 +110,37 @@ class _SigninPageState extends State<SigninPage> {
                   const SizedBox(
                     height: 16,
                   ),
-                  Text.rich(
-                    TextSpan(
-                      text: 'Belum Punya Akun? ',
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xFFAFAFAF),
-                      ),
-                      children: [
-                        TextSpan(
-                          text: 'Daftar',
-                          style: GoogleFonts.poppins(
-                            fontSize: 14,
-                            //decoration: TextDecoration.underline,
-                            fontWeight: FontWeight.w500,
-                            color: AppColor.primary,
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              // Navigator.of(context).push(MaterialPageRoute(
-                              //     builder: (context) => SignupPage()));
-                            },
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text.rich(
+                      TextSpan(
+                        text: 'Belum Punya Akun? ',
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: const Color(0xFFAFAFAF),
                         ),
-                      ],
+                        children: [
+                          TextSpan(
+                            text: 'Daftar',
+                            style: GoogleFonts.plusJakartaSans(
+                              fontSize: 14,
+                              //decoration: TextDecoration.underline,
+                              fontWeight: FontWeight.w500,
+                              color: AppColor.primary,
+                            ),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                // Navigator.of(context).push(MaterialPageRoute(
+                                //     builder: (context) => SignupPage()));
+                              },
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(
                     height: 24,
-                  ),
-                  Text(
-                    "Atau",
-                    style: GoogleFonts.poppins(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      color: const Color(0xFF444444),
-                    ),
                   ),
                   const SizedBox(
                     height: 24,
@@ -137,11 +163,11 @@ class _SigninPageState extends State<SigninPage> {
       decoration: InputDecoration(
         isDense: true,
         filled: true,
-        fillColor: const Color(0xFFF1F1F1),
+        fillColor: Colors.white,
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         hintText: "Password",
-        hintStyle: GoogleFonts.poppins(
+        hintStyle: GoogleFonts.plusJakartaSans(
           fontSize: 16,
           fontWeight: FontWeight.w400,
           color: const Color(0xFF7A7A7A),
@@ -165,9 +191,7 @@ class _SigninPageState extends State<SigninPage> {
           child: Padding(
             padding: const EdgeInsets.only(right: 16),
             child: Icon(
-              isPasswordHidden
-                  ? FluentSystemIcons.ic_fluent_eye_hide_regular
-                  : FluentSystemIcons.ic_fluent_eye_show_regular,
+              isPasswordHidden ? Icons.visibility : Icons.visibility_off,
               color: const Color(0xFFAEAECF),
             ),
           ),
@@ -184,11 +208,11 @@ class _SigninPageState extends State<SigninPage> {
       decoration: InputDecoration(
           isDense: true,
           filled: true,
-          fillColor: const Color(0xFFF1F1F1),
+          fillColor: Colors.white,
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           hintText: "Email",
-          hintStyle: GoogleFonts.poppins(
+          hintStyle: GoogleFonts.plusJakartaSans(
             fontSize: 16,
             fontWeight: FontWeight.w400,
             color: const Color(0xFF7A7A7A),
@@ -206,5 +230,3 @@ class _SigninPageState extends State<SigninPage> {
     );
   }
 }
-
-class FluentSystemIcons {}

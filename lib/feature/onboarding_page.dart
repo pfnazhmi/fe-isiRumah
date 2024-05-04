@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:isirumah/core/app_asset.dart';
+import 'package:isirumah/feature/signin_page.dart';
 import 'package:isirumah/widget/button.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -51,7 +52,12 @@ class OnboardingPage extends StatelessWidget {
                 ),
                 Button(
                   label: "Mulai sekarang",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SigninPage()),
+                    );
+                  },
                   isExpand: true,
                 ),
               ],
