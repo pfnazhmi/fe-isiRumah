@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:isirumah/core/app_color.dart';
 import 'package:isirumah/feature/signin_page.dart';
+import 'package:isirumah/feature/signup_page.dart';
 import 'package:isirumah/feature/splash_page.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const SigninPage(),
+      home: const SignupPage(),
     );
   }
 }

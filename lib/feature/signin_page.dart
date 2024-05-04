@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:isirumah/core/app_asset.dart';
 import 'package:isirumah/core/app_color.dart';
+import 'package:isirumah/feature/signup_page.dart';
 import 'package:isirumah/widget/button.dart';
 
 class SigninPage extends StatefulWidget {
@@ -131,8 +132,11 @@ class _SigninPageState extends State<SigninPage> {
                             ),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                // Navigator.of(context).push(MaterialPageRoute(
-                                //     builder: (context) => SignupPage()));
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => SignupPage(),
+                                  ),
+                                );
                               },
                           ),
                         ],
@@ -173,14 +177,14 @@ class _SigninPageState extends State<SigninPage> {
           color: const Color(0xFF7A7A7A),
         ),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(20),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: AppColor.primary),
         ),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(20),
             borderSide: BorderSide.none),
         suffixIcon: GestureDetector(
           onTap: () {
@@ -218,14 +222,14 @@ class _SigninPageState extends State<SigninPage> {
             color: const Color(0xFF7A7A7A),
           ),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(20),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(20),
             borderSide: const BorderSide(color: AppColor.primary),
           ),
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(20),
               borderSide: BorderSide.none)),
     );
   }
