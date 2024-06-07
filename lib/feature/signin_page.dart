@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:isirumah/core/app_asset.dart';
 import 'package:isirumah/core/app_color.dart';
 import 'package:isirumah/feature/explore_page.dart';
+import 'package:isirumah/feature/navbar.dart';
 import 'package:isirumah/feature/signup_page.dart';
 import 'package:isirumah/widget/button.dart';
 
@@ -110,7 +111,7 @@ class _SigninPageState extends State<SigninPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ExplorePage(),
+                          builder: (context) => const Navbar(),
                         ),
                       )
                     },

@@ -13,43 +13,48 @@ class ExplorePage extends StatefulWidget {
 class _ExplorePageState extends State<ExplorePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.bgScreen,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 24),
-                Image.asset(AppAsset.logo),
-                const SizedBox(height: 24),
-                searchField(),
-                const SizedBox(height: 24),
-                cardPost(),
-                const SizedBox(
-                  height: 12,
-                ),
-                cardPost(),
-              ],
+    return Material(
+      child: Scaffold(
+        backgroundColor: AppColor.bgScreen,
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 24),
+                  Image.asset(AppAsset.logo),
+                  const SizedBox(height: 24),
+                  searchField(),
+                  const SizedBox(height: 24),
+                  cardPost(),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  cardPost(),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 60),
-        child: FloatingActionButton(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50),
-          ),
-          onPressed: () {
-            print('Tombol tambah ditekan');
-          },
-          backgroundColor: AppColor.primary,
-          child: const Icon(
-            Icons.add,
-            color: Colors.white,
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: FloatingActionButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
+            onPressed: () {
+              print('Tombol tambah ditekan');
+            },
+            backgroundColor: AppColor.primary,
+            child: const Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
           ),
         ),
       ),
