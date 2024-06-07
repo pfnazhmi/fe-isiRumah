@@ -11,4 +11,6 @@ class AppAsset {
   static const selectedExplore = "assets/images/selected_explore.png";
   static const selectedProfile = "assets/images/selected_profile.png";
   static const selectedShop = "assets/images/selected_shop.png";
+  static const profile = "assets/images/profile.png";
+  static const posting = "assets/images/post1.png";
 }
