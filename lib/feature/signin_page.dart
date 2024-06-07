@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:isirumah/core/app_asset.dart';
 import 'package:isirumah/core/app_color.dart';
+import 'package:isirumah/feature/explore_page.dart';
 import 'package:isirumah/feature/signup_page.dart';
 import 'package:isirumah/widget/button.dart';
 
@@ -96,7 +97,7 @@ class _SigninPageState extends State<SigninPage> {
                       style: GoogleFonts.plusJakartaSans(
                           //decoration: TextDecoration.underline,
                           fontSize: 12,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w500,
                           color: AppColor.primary),
                     ),
                   ),
@@ -105,7 +106,14 @@ class _SigninPageState extends State<SigninPage> {
                   ),
                   Button(
                     label: "Login sekarang",
-                    onTap: () => {},
+                    onTap: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ExplorePage(),
+                        ),
+                      )
+                    },
                     isExpand: true,
                   ),
                   const SizedBox(
@@ -134,7 +142,7 @@ class _SigninPageState extends State<SigninPage> {
                               ..onTap = () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (context) => SignupPage(),
+                                    builder: (context) => const SignupPage(),
                                   ),
                                 );
                               },

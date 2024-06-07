@@ -31,7 +31,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.transparent,
+        backgroundColor: const Color(0xFFF6F6F6),
         body: Center(
           child: LayoutBuilder(
             builder: (context, constraints) {
