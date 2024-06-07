@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:isirumah/core/app_asset.dart';
 import 'package:isirumah/core/app_color.dart';
+import 'package:isirumah/feature/buatpost_page.dart';
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({Key? key}) : super(key: key);
@@ -48,7 +49,12 @@ class _ExplorePageState extends State<ExplorePage> {
               borderRadius: BorderRadius.circular(50),
             ),
             onPressed: () {
-              print('Tombol tambah ditekan');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BuatpostPage(),
+                ),
+              );
             },
             backgroundColor: AppColor.primary,
             child: const Icon(
