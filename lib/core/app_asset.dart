@@ -13,4 +13,5 @@ class AppAsset {
   static const selectedShop = "assets/images/selected_shop.png";
   static const profile = "assets/images/profile.png";
   static const posting = "assets/images/post1.png";
+  static const shopKursi = "assets/images/kursi_shop.png";
 }
