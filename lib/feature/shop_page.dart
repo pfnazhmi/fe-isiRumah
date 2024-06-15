@@ -57,7 +57,7 @@ class ShopPage extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailshopPage(),
+            builder: (context) => const DetailshopPage(),
           ),
         );
       },
@@ -103,10 +103,10 @@ class ShopPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Rp. 123.456',
+                    'Rp. 123.123',
                     style: GoogleFonts.plusJakartaSans(
                       fontWeight: FontWeight.w700,
-                      fontSize: 18,
+                      fontSize: 14,
                       color: AppColor.primary,
                     ),
                   ),

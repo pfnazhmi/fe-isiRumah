@@ -32,8 +32,11 @@ class DetailshopPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: AppColor.grey,
                   borderRadius: BorderRadius.circular(16),
-                  image: const DecorationImage(
-                    image: AssetImage(AppAsset.shopKursi),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    AppAsset.shopKursi,
                     fit: BoxFit.cover,
                   ),
                 ),
