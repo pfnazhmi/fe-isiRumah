@@ -10,7 +10,9 @@ class DetailshopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.bgScreen,
       appBar: AppBar(
+        backgroundColor: AppColor.bgScreen,
         title: Text(
           'Detail Shop',
           style: GoogleFonts.plusJakartaSans(
@@ -22,10 +24,11 @@ class DetailshopPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 24),
               Container(
                 width: double.infinity,
                 height: 351,

@@ -63,7 +63,7 @@ class _SigninPageState extends State<SigninPage> {
                       style: GoogleFonts.plusJakartaSans(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black, // Warna default untuk teks
+                        color: Colors.black, 
                       ),
                       children: [
                         const TextSpan(
